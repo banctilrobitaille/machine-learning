@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce0f46e-44bf-4995-afe7-ecb759516831" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DecisionTreeBuilder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSVUtils.py" afterPath="$PROJECT_DIR$/CSVUtils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DecisionTree.py" afterPath="$PROJECT_DIR$/DecisionTree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DecisionTreeUtils.py" afterPath="$PROJECT_DIR$/DecisionTreeUtils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Instance.py" afterPath="$PROJECT_DIR$/Instance.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Node.py" afterPath="$PROJECT_DIR$/Node.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problem_1.py" afterPath="$PROJECT_DIR$/Problem_1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplitCondition.py" afterPath="$PROJECT_DIR$/SplitCondition.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataset.py" afterPath="$PROJECT_DIR$/dataset.py" />
     </list>
     <ignored path="machine-learning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Problem_1.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Problem_1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Problem_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.2106703">
               <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -59,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DecisionTreeBuilder.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DecisionTreeBuilder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DecisionTreeBuilder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4514364">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -167,9 +159,9 @@
         <option value="$PROJECT_DIR$/DecisionTreeUtils.py" />
         <option value="$PROJECT_DIR$/Instance.py" />
         <option value="$PROJECT_DIR$/DecisionTreeBuilder.py" />
-        <option value="$PROJECT_DIR$/Problem_1.py" />
         <option value="$PROJECT_DIR$/Node.py" />
         <option value="$PROJECT_DIR$/DecisionTree.py" />
+        <option value="$PROJECT_DIR$/Problem_1.py" />
       </list>
     </option>
   </component>
@@ -892,16 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problem_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DecisionTreeUtils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -938,10 +920,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DecisionTreeBuilder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4514364">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problem_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2106703">
+          <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
