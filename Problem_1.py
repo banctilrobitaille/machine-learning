@@ -1,27 +1,38 @@
-import csv
-import numpy as np
+from Dataset import Dataset
+from DecisionTreeUtils import DecisionTreeUtils
+from Node import Node
+from DecisionTreeBuilder import DecisionTreeBuilder
 
-with open('02_homework_dataset.csv', newline='') as csvfile:
-    file = csv.reader(csvfile, delimiter=' ', quotechar='|')
-    for row in file:
-        print(row)
+if __name__ == '__main__':
+    initialDataSet = Dataset.from_csv_file("02_homework_dataset.csv")
+    DecisionTreeBuilder().buildWith(initialDataSet, depth=2).toString()
 
 
 
-def gini(prob):
-    return prob*prob
+    """rootNode = Node(initialDataSet)
+    rootNode.giniIndex = DecisionTreeUtils.computeGiniIndexOf(rootNode)
+    splitCondition = DecisionTreeUtils.findOptimalSplitConditionFor(rootNode)
+    splitCondition2 = DecisionTreeUtils.findOptimalSplitConditionFor(splitCondition.rightNode)
+    splitCondition3 = DecisionTreeUtils.findOptimalSplitConditionFor(splitCondition2.leftNode)
 
-def indexGini(prob):
-    sum_ = 0
-    for p in prob:
-        sum_ += gini(prob)
-
-    return 1 - sum_
-
-#def createLeftBranch(feat_data, threshold):
-    #j = 0
-    #left_branch = np.array(feat_data.shape)
-    #for value in feat_data[0,:]:
-        #if  value <= threshold:
-           #left_branch[0,j] = value
-           #left_branch[1,j] =
+    print(splitCondition)
+    print("Left Node")
+    print(splitCondition.leftNode)
+    print("Right Node")
+    print(splitCondition.rightNode)
+    print("\n")
+    print("-------------------------------------------------------")
+    print("\n")
+    print(splitCondition2)
+    print("Left Node")
+    print(splitCondition2.leftNode)
+    print("Right Node")
+    print(splitCondition2.rightNode)
+    print("\n")
+    print("-------------------------------------------------------")
+    print("\n")
+    print(splitCondition3)
+    print("Left Node")
+    print(splitCondition3.leftNode)
+    print("Right Node")
+    print(splitCondition3.rightNode)"""
