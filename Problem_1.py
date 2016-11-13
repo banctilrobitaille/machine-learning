@@ -1,6 +1,4 @@
 from Dataset import Dataset
-from DecisionTreeUtils import DecisionTreeUtils
-from Node import Node
 from DecisionTreeBuilder import DecisionTreeBuilder
 
 if __name__ == '__main__':

@@ -4,14 +4,14 @@ from DecisionTreeUtils import DecisionTreeUtils
 
 
 class DecisionTreeBuilder:
-    def buildWith(self, initialDataSet, depth):
+    def buildWith(self, initialDataSet, depth=10):
         decisionTree = DecisionTree().withRootNode(Node(initialDataSet))
 
         while decisionTree.depth is not depth and not decisionTree.isOptimal:
             newNodes = []
-            for node in decisionTree.unsplittedNodes:
+            for node in decisionTree.unpureNodes:
                 node.giniIndex = DecisionTreeUtils.computeGiniIndexOf(node)
-                node.split(DecisionTreeUtils.findOptimalSplitConditionFor(node))
+                node.splitFromCondition(DecisionTreeUtils.findOptimalSplitConditionFor(node))
                 newNodes.extend(node.childs)
             decisionTree.addNodes(newNodes)
 

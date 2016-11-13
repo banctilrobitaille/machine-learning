@@ -23,12 +23,12 @@ class DecisionTree:
         return self.__nodes
 
     @property
-    def unsplittedNodes(self):
+    def unpureNodes(self):
         return list(filter(lambda node: node.isPure is False, self.__nodes))
 
     @property
     def isOptimal(self):
-        return len(self.unsplittedNodes) is 0
+        return len(self.unpureNodes) is 0
 
     def withRootNode(self, node):
         self.__rootNode = node
@@ -41,7 +41,6 @@ class DecisionTree:
 
     def toString(self):
         for node in self.__nodes:
-            print("\n")
             print(node.splitCondition)
             print(node)
             print("\n")

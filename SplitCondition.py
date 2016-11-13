@@ -6,6 +6,7 @@ class SplitCondition:
     __gain = None
 
     def __init__(self, feature, threshold):
+        self.__gain = 0
         self.__feature = feature
         self.__threshold = threshold
 
@@ -40,6 +41,9 @@ class SplitCondition:
     def withRightNode(self, node):
         self.__rightNode = node
         return self
+
+    def isBetterThan(self, splitCondition):
+        return self.__gain > splitCondition.gain
 
     def __str__(self):
         return "Gain: " + str(self.__gain) + " Feature: " + self.__feature + " Threshold: " + str(self.__threshold)

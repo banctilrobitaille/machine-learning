@@ -78,7 +78,7 @@ class Node:
     def splitCondition(self, splitCondition):
         self.__splitCondition = splitCondition
 
-    def split(self, splitCondition):
+    def splitFromCondition(self, splitCondition):
         if splitCondition.gain is not None and splitCondition.gain > 0.0:
             self.__leftNode = splitCondition.leftNode
             self.__rightNode = splitCondition.rightNode

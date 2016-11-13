@@ -17,7 +17,7 @@ class DecisionTreeUtils:
 
     @staticmethod
     def findOptimalSplitConditionFor(node):
-        splitConditions = []
+        optimalSplitCondition = SplitCondition(None, None)
 
         for feature in node.features:
             for threshold in node.dataSet.getInstancesValueFromFeature([feature]):
@@ -29,17 +29,17 @@ class DecisionTreeUtils:
                 leftNode.giniIndex = DecisionTreeUtils.computeGiniIndexOf(leftNode)
                 rightNode.giniIndex = DecisionTreeUtils.computeGiniIndexOf(rightNode)
 
-                splitConditions.append(
-                        SplitCondition(feature, threshold).withLeftNode(leftNode).withRightNode(rightNode))
+                splitCondition = SplitCondition(feature, threshold).withLeftNode(leftNode).withRightNode(rightNode)
+                splitCondition.gain = DecisionTreeUtils.computeGain(node, splitCondition)
 
-        for splitCondition in splitConditions:
-            DecisionTreeUtils.computeGain(node, splitCondition)
+                if splitCondition.isBetterThan(optimalSplitCondition):
+                    optimalSplitCondition = splitCondition
 
-        return max(splitConditions, key=attrgetter('gain'))
+        return optimalSplitCondition
 
     @staticmethod
     def computeGain(parentNode, splitCondition):
         leftNode = splitCondition.leftNode
         rightNode = splitCondition.rightNode
-        splitCondition.gain = parentNode.giniIndex - (leftNode.numberOfInstances / parentNode.numberOfInstances) * leftNode.giniIndex \
-            - (rightNode.numberOfInstances / parentNode.numberOfInstances) * rightNode.giniIndex
+        return parentNode.giniIndex - (leftNode.numberOfInstances / parentNode.numberOfInstances) * leftNode.giniIndex \
+               - (rightNode.numberOfInstances / parentNode.numberOfInstances) * rightNode.giniIndex
